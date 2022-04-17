@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.1" type="plugin" group="system" method="upgrade">
+	<name>Inject-Plugin</name>
+	<author>Trijal Bhardwaj</author>
+	<creationDate>April 2022</creationDate>
+	<copyright>Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.0.0</version>
+	<description>INJECTING_A_JS_ FILE_PLUGIN</description>
+	<files>
+		<filename plugin="myInject">myInject.php</filename>
+        <filename>myInject.xml</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">administrator\language\en-GB\en-GB.en-GB.plg_system_myInject.ini</language>
+		<language tag="en-GB">administrator\language\en-GB\en-GB.plg_system_myInject.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="Input field">
+				<field
+					name="Inputarea"
+					type="text"
+					label="Add_Input_Value"
+					folder="editor"
+					default="HI! JOOMLA USER"
+				/>
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>
