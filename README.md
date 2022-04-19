@@ -87,7 +87,7 @@ You have found an Issue, have a question or you would like to suggest changes re
 
 ## Translations
 
-You want to translate this extension to your own language? Check out the [Crowdin Page for my Extensions](https://joomla.crowdin.com) for more details. Feel free to [Open An Issue Here](https://github.com/Trijal-Bhardwaj/Joomla-Plugin-GSoC-2022-Programming-Task-P5-Schema/issues/new) on any question that comes up.
+You want to translate this extension to your own language? Check out the [Crowdin Page For My Extensions](https://joomla.crowdin.com) for more details. Feel free to [Open An Issue Here](https://github.com/Trijal-Bhardwaj/Joomla-Plugin-GSoC-2022-Programming-Task-P5-Schema/issues/new) on any question that comes up.
 
 ## License
 
