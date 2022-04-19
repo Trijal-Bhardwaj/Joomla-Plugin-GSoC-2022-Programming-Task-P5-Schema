@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+   <fields name="customfield">
+      <fieldset name="customfield" label="PLG_CONTENT_CUSTOMFIELD_SLIDER_LABEL">
+         <field name="articleID" type="hidden" filter="string" size="30" required="1" />
+         <field name="customfield1" type="text" label="PLG_CONTENT_CUSTOMFIELD_FIELD1_LABEL" filter="string" size="30" required="1" />
+         <field name="customfield2" type="text" label="PLG_CONTENT_CUSTOMFIELD_FIELD2_LABEL" filter="string" size="30" required="1" />
+      </fieldset>
+   </fields>
+</form>

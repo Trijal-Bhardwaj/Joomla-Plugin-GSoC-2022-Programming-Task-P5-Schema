@@ -35,7 +35,7 @@ This Repository is Maintained For My Submission Of Joomla Plugin GSoC 2022 Progr
 Now The Inital Setup Is Completed.
 
 ```PHP
-class PlgContentformplugin extends CMSPlugin {
+class PlgContentcustomfield extends CMSPlugin {
     public function onContentPrepareData() {
     }
     public function onContentPrepareForm() {
@@ -58,12 +58,12 @@ class PlgContentformplugin extends CMSPlugin {
 
 ## Plugin Folder Structure
 
-    ├── form_fields
-    │	└──formplugin.xml
+    ├── forms
+    │	customfield.xml
     ├── language
     │	└──en-GB
-    │   	└── plg_content_formplugin.ini
-    │   	└── plg_content_formplugin.sys.ini
+    │   	└── plg_content_customfield.ini
+    │   	└── plg_content_customfield.sys.ini
     ├── sql
     │	└──mysql
     │   	└── install.mysql.utf8.sql
@@ -71,9 +71,9 @@ class PlgContentformplugin extends CMSPlugin {
     │	└──sqlazure
     │   	└── install.sqlazure.utf8.sql
     │   	└── uninstall.sqlazure.utf8.sql
-    └── formplugin.php
-    └── formplugin.xml
-    └── Joomla_CustomFormField_Plugin.rar
+    └── customfield.php
+    └── customfield.xml
+    └── customfield.zip
 
 ### Update Server
 

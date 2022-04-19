@@ -18,7 +18,7 @@ use Joomla\CMS\Table\Table;
  * A Plugin to Add Custom Form Fields In BackEnd Article View And Display The Form Field Values Below The Article In The FrontEnd
  *
  */
-class PlgContentformplugin extends CMSPlugin {
+class PlgContentcustomfield extends CMSPlugin {
 
     /**
      * @var    \Joomla\Database\DatabaseDriver
@@ -50,7 +50,7 @@ class PlgContentformplugin extends CMSPlugin {
 
         if (is_object($data)) {
             $articleID = $data->id ?? 0;
-            if (!isset($data->formplugin) && $articleID > 0) { // Checking If The Form Already Has Some Data
+            if (!isset($data->customfield) && $articleID > 0) { // Checking If The Form Already Has Some Data
                 $db = $this->db; // Loading The Table Data From The Database
                 $query = $db->getQuery(true)
                     ->select('*')
@@ -58,20 +58,20 @@ class PlgContentformplugin extends CMSPlugin {
                     ->where('articleID = ' . $articleID);
                 $db->setQuery($query);
                 $results = $db->loadAssoc();
-                $data->formplugin = []; // Inserting Existing Data Into Form Fields
+                $data->customfield = []; // Inserting Existing Data Into Form Fields
                 if (is_array($results) || is_object($results)) {
                     foreach ($results as $k => $v) {
-                        $data->formplugin[$k] = $v;
+                        $data->customfield[$k] = $v;
                     }
                 }
                 else {
-                    $data->formplugin = []; // Inserting Article ID (As It Is A Hidden Field)
-                    $data->formplugin['articleID'] = $articleID;
+                    $data->customfield = []; // Inserting Article ID (As It Is A Hidden Field)
+                    $data->customfield['articleID'] = $articleID;
                 }
             }
             else { 
-                $data->formplugin = []; // Inserting Article ID (As It Is A Hidden Field)
-                $data->formplugin['articleID'] = $articleID;
+                $data->customfield = []; // Inserting Article ID (As It Is A Hidden Field)
+                $data->customfield['articleID'] = $articleID;
             }
         }
 
@@ -96,7 +96,7 @@ class PlgContentformplugin extends CMSPlugin {
 
         // Loading The Form Fields
         FormHelper::addFormPath(__DIR__ . '/forms');
-        $form->loadFile('formplugin');
+        $form->loadFile('customfield');
 
         return true;
     }
@@ -113,7 +113,7 @@ class PlgContentformplugin extends CMSPlugin {
      *
      */
     public function onContentBeforeSave($context, &$article, $isNew, $data) {
-        if (isset($data['formplugin']) && count($data['formplugin'])) { // Checking If $data Has The Form Data
+        if (isset($data['customfield']) && count($data['customfield'])) { // Checking If $data Has The Form Data
             $db = $this->db;
 
             if (!$isNew) { // Deleting The Existing Row To Add Updated Data
@@ -126,7 +126,7 @@ class PlgContentformplugin extends CMSPlugin {
 
             // Creating Object To Insert Data Into The Database
             $query = new stdClass();
-            foreach ($data['formplugin'] as $k => $v) {
+            foreach ($data['customfield'] as $k => $v) {
                 $query->$k = $v;
             }
 

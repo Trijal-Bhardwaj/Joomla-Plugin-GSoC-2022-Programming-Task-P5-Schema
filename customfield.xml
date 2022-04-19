@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="plugin" group="content" method="install">
-   <name>plg_content_formplugin</name>
+   <name>plg_content_customfield</name>
    <author>Trijal Bhardwaj</author>
    <creationDate>April 2022</creationDate>
    <authorEmail>trijalbhardwaj14@gmail.com</authorEmail>
    <version>1.0.0</version>
-   <description>PLG_CONTENT_FORMPLUGIN_XML_DESCRIPTION</description>
+   <description>PLG_CONTENT_CUSTOMFIELD_XML_DESCRIPTION</description>
    <files>
-      <filename plugin="formplugin">formplugin.php</filename>
-      <folder>form_fields</folder>
+      <filename plugin="customfield">customfield.php</filename>
+      <folder>forms</folder>
       <folder>sql</folder>
    </files>
    <languages>
-      <language tag="en-GB">language/en-GB/plg_content_formplugin.ini</language>
-      <language tag="en-GB">language/en-GB/plg_content_formplugin.sys.ini</language>
+      <language tag="en-GB">language/en-GB/plg_content_customfield.ini</language>
+      <language tag="en-GB">language/en-GB/plg_content_customfield.sys.ini</language>
    </languages>
    <install>
       <sql>
