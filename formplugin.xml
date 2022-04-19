@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="content" method="install">
+   <name>plg_content_formplugin</name>
+   <author>Trijal Bhardwaj</author>
+   <creationDate>April 2022</creationDate>
+   <authorEmail>trijalbhardwaj14@gmail.com</authorEmail>
+   <version>1.0.0</version>
+   <description>PLG_CONTENT_FORMPLUGIN_XML_DESCRIPTION</description>
+   <files>
+      <filename plugin="formplugin">formplugin.php</filename>
+      <folder>form_fields</folder>
+      <folder>sql</folder>
+   </files>
+   <languages>
+      <language tag="en-GB">language/en-GB/plg_content_formplugin.ini</language>
+      <language tag="en-GB">language/en-GB/plg_content_formplugin.sys.ini</language>
+   </languages>
+   <install>
+      <sql>
+         <file driver="mysql" charset="utf8">sql/mysql/install.mysql.utf8.sql</file>
+         <file driver="sqlazure" charset="utf8">sql/sqlazure/install.sqlazure.utf8.sql</file>
+      </sql>
+   </install>
+   <uninstall>
+      <sql>
+         <file driver="mysql" charset="utf8">sql/mysql/uninstall.mysql.utf8.sql</file>
+         <file driver="sqlazure" charset="utf8">sql/sqlazure/uninstall.sqlazure.utf8.sql</file>
+      </sql>
+   </uninstall>
+</extension>
