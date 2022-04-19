@@ -24,7 +24,7 @@ This Repository is Maintained For My Submission Of Joomla Plugin GSoC 2022 Progr
 
 ### Initial Setup For The Plugin
 
-1. Download or clone this package.[Download the latest version of the plugin](https://github.com/Trijal-Bhardwaj/Joomla-Plugin-GSoC-2022-Programming-Task-P5-Schema/)
+1. Download or clone this package. [Download the latest version of the plugin](https://github.com/Trijal-Bhardwaj/Joomla-Plugin-GSoC-2022-Programming-Task-P5-Schema/)
 2. Rename all `example` string to your plugin name.
 3. Rename all `folder` string to your plugin group name.
 4. Move whole folder to Joomla! dir: `/plugins/(your group)/(your plugin)`
